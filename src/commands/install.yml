@@ -22,7 +22,7 @@ steps:
           echo 'source ~/google-cloud-sdk/path.bash.inc' >> $BASH_ENV
         }
 
-        if grep 'docker\|lxc' /proc/1/cgroup > /dev/null 2>&1; then
+        if grep 'docker\|lxc|kube' /proc/1/cgroup > /dev/null 2>&1; then
           if [[ $(command -v gcloud) == "" ]]; then
             install
           else
